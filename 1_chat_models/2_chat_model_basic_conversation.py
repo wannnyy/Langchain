@@ -9,9 +9,12 @@ load_dotenv(override=True)
 model = ChatOpenAI(model="gpt-4o-mini")
 
 # SystemMessage:
-#   Message for priming AI behavior, usually passed in as the first of a sequenc of input messages.
+#   Message for priming AI behavior, usually passed in as the first of a sequence of input messages.
+#   Generally used to set the context for the conversation.
 # HumanMessagse:
 #   Message from a human to the AI model.
+# AIMessage:
+#  Message from an AI.
 messages = [
     SystemMessage(content="Solve the following math problems"),
     HumanMessage(content="What is 81 divided by 9?"),
